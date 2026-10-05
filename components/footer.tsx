@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/toast";
 
 const LINK_COLUMNS = [
@@ -93,7 +92,6 @@ const SOCIALS = [
 export default function Footer() {
   const [email, setEmail] = useState("");
   const { showToast } = useToast();
-  const router = useRouter();
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();

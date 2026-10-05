@@ -274,7 +274,7 @@ export default function PricesPage() {
 
                     <div className="flex-1 space-y-3 border-t border-black/5 pt-5">
                       <span className="block text-[11px] font-bold uppercase tracking-wider text-text-primary">
-                        What's Included:
+                        What&apos;s Included:
                       </span>
                       <ul className="space-y-2.5">
                         {tier.features.map((feat) => (
@@ -467,7 +467,7 @@ export default function PricesPage() {
               Need a personalized proposal for your exact group size?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-gray-300 md:text-base">
-              Tell us your target dates, dream destinations, and group preferences. We'll send an itemized, transparent travel blueprint within 4 hours.
+              Tell us your target dates, dream destinations, and group preferences. We&apos;ll send an itemized, transparent travel blueprint within 4 hours.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link href="/contact">

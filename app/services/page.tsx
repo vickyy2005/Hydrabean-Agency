@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import TiltCard from "@/components/ui/tilt-card";
-import Reveal from "@/components/ui/reveal";
 import MagneticButton from "@/components/ui/magnetic-button";
 import { useToast } from "@/components/ui/toast";
 
@@ -367,7 +365,7 @@ export default function ServicesPage() {
                   Guarantees that come standard with every journey.
                 </h2>
                 <p className="mt-5 text-sm leading-relaxed text-text-muted md:text-base">
-                  When you travel with Hydrabean, you receive complete peace of mind. We don't charge extra for basic hospitality or emergency support — it is woven into the very fabric of our service.
+                  When you travel with Hydrabean, you receive complete peace of mind. We don&apos;t charge extra for basic hospitality or emergency support — it is woven into the very fabric of our service.
                 </p>
                 <div className="mt-8">
                   <Link href="/prices">

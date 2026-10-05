@@ -10,6 +10,8 @@ interface MagneticButtonProps {
   onClick?: () => void;
   href?: string;
   range?: number;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export default function MagneticButton({
@@ -18,6 +20,8 @@ export default function MagneticButton({
   onClick,
   href,
   range = 12,
+  type = "button",
+  disabled,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -36,8 +40,6 @@ export default function MagneticButton({
 
   const handleMouseLeave = () => setPos({ x: 0, y: 0 });
 
-  const Component = href ? "a" : "button";
-
   return (
     <motion.div
       ref={ref}
@@ -47,16 +49,30 @@ export default function MagneticButton({
       transition={{ type: "spring", stiffness: 150, damping: 12, mass: 0.2 }}
       className="inline-block"
     >
-      <Component
-        href={href}
-        onClick={onClick}
-        className={clsx(
-          "inline-flex items-center justify-center gap-2 rounded-full transition-transform duration-300 will-change-transform hover:scale-[1.03] active:scale-[0.97]",
-          className
-        )}
-      >
-        {children}
-      </Component>
+      {href ? (
+        <a
+          href={href}
+          onClick={onClick}
+          className={clsx(
+            "inline-flex items-center justify-center gap-2 rounded-full transition-transform duration-300 will-change-transform hover:scale-[1.03] active:scale-[0.97]",
+            className
+          )}
+        >
+          {children}
+        </a>
+      ) : (
+        <button
+          type={type}
+          disabled={disabled}
+          onClick={onClick}
+          className={clsx(
+            "inline-flex items-center justify-center gap-2 rounded-full transition-transform duration-300 will-change-transform hover:scale-[1.03] active:scale-[0.97]",
+            className
+          )}
+        >
+          {children}
+        </button>
+      )}
     </motion.div>
   );
 }

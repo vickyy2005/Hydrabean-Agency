@@ -7,7 +7,6 @@ import Footer from "@/components/footer";
 import TiltCard from "@/components/ui/tilt-card";
 import Reveal from "@/components/ui/reveal";
 import MagneticButton from "@/components/ui/magnetic-button";
-import { useToast } from "@/components/ui/toast";
 
 const STATS = [
   { value: "12,000+", label: "Voyagers Guided Worldwide" },
@@ -130,8 +129,6 @@ const TIMELINE = [
 ];
 
 export default function AboutPage() {
-  const { showToast } = useToast();
-
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary">
       <Navbar />

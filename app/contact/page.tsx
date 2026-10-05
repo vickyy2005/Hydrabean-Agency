@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import TiltCard from "@/components/ui/tilt-card";
 import MagneticButton from "@/components/ui/magnetic-button";
 import { useToast } from "@/components/ui/toast";
 
@@ -123,7 +122,7 @@ export default function ContactPage() {
             </div>
 
             <h1 className="font-display text-4xl font-extrabold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-[4.2rem] leading-[1.08] max-w-4xl">
-              Let's Plan Your{" "}
+              Let&apos;s Plan Your{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-accent-green via-[#87dc00] to-text-primary bg-clip-text text-transparent">
                   Next Masterpiece
